@@ -1,0 +1,22 @@
+{{define "delete"}}
+{{template "header"}}
+
+<main class="px-3">
+      <p>{{.}}</p>
+      <form action="/del_post" method="post">
+            <textarea name="nameS" id="nameS" class="form-control" placeholder="Введите id сотрудника" required></textarea><br>
+            <button class="btn btn-warning btn-secondary btn-sm">Удалить</button>
+            <script>
+                document.getElementById('nameS').onkeydown = function (e) {
+                    return !(/^[А-Яа-яA-Za-z ]$/.test(e.key));  // IE > 9
+                }
+            </script>
+      </form>
+
+  <p class="lead">
+    <a href="/" class="btn btn-warning btn-secondary btn-sm">Назад</a>
+  </p>
+</main>
+
+{{template "footer"}}
+{{end}}

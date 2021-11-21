@@ -1,0 +1,20 @@
+{{define "index"}}
+{{template "header"}}
+
+<main class="px-3">
+  <h1>Главная страница</h1>
+  <p class="lead">
+  </p>
+
+  <hr>
+  <a href="/create" class="btn btn-warning btn-secondary btn-sm">Добавить сотрудника</a>
+  <a href="/delete" class="btn btn-warning btn-secondary btn-sm">Удалить сотрудника</a>
+  <a href="/update" class="btn btn-warning btn-secondary btn-sm">Изменить данные о сотруднике</a>
+  <hr>
+  <a href="/showComp" class="btn btn-warning btn-secondary btn-sm">Просмотреть сотрудников наших компаний</a>
+  <a href="/getCD" class="btn btn-warning btn-secondary btn-sm">Просмотреть какие сотрудники работают в отделах наших компаний</a>
+  <hr>
+</main>
+
+{{template "footer"}}
+{{end}}

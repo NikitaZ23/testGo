@@ -1,0 +1,33 @@
+{{define "updateS"}}
+{{template "header"}}
+
+<main class="px-3">
+  <h1 class="cover-heading">Форма Редактирования</h1>
+
+  {{if .NameS}}
+  <form action="/save_update" method="post">
+    ID:
+    <input name="nameID" id="nameID" value = "{{.Id}}" style="width:50px; height:40px;" readonly ></input><br>
+    <textarea name="nameS" id="nameS" class="form-control" placeholder="Введите имя" required >{{.NameS}}</textarea><br>
+    <textarea name="surnameS" id="surnameS" class="form-control" placeholder="Введите фамилию" required>{{.SurnameS}}</textarea><br>
+    <textarea name="phoneS" id="phoneS" class="form-control" placeholder="Введите телефон" required>{{.PhoneS}}</textarea><br>
+    <textarea name="companyId" id="companyId" class="form-control" placeholder="Введите имя компании" required>{{.CompanyName}}</textarea><br>
+    <textarea name="passportT" id="passportT" class="form-control" placeholder="Введите тип паспорта" required>{{.PassportT}}</textarea><br>
+    <textarea name="passportN" id="passportN" class="form-control" placeholder="Введите номер паспорта" required>{{.PassportN}}</textarea><br>
+    <textarea name="departmentN" id="departmentN" class="form-control" placeholder="Введите имя департамента" required>{{.NameD}}</textarea><br>
+    <textarea name="departmentPh" id="departmentPh" class="form-control" placeholder="Введите телефон департамента" required>{{.PhoneD}}</textarea><br>
+    <button class="btn btn-warning btn-secondary btn-sm">Изменить</button>
+
+  </form>
+  {{else}}
+  <p class="lead">Такого сотрудника нет</p>
+  {{end}}
+
+
+  <p class="lead">
+    <a href="/update" class="btn btn-warning btn-secondary btn-sm">Назад</a>
+  </p>
+</main>
+
+{{template "footer"}}
+{{end}}

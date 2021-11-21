@@ -1,0 +1,24 @@
+{{define "create"}}
+{{template "header"}}
+
+<main class="px-3">
+  <h1 class="cover-heading">Форма добавления</h1>
+  <p>{{.}}</p>
+  <form action="/save_article" method="post">
+
+    <textarea name="nameS" id="nameS" class="form-control" placeholder="Введите имя" required></textarea><br>
+    <textarea name="surnameS" id="surnameS" class="form-control" placeholder="Введите фамилию" required></textarea><br>
+    <textarea name="phoneS" id="phoneS" class="form-control" placeholder="Введите телефон" required></textarea><br>
+    <textarea name="companyId" id="companyId" class="form-control" placeholder="Введите имя компании" required></textarea><br>
+    <textarea name="passportT" id="passportT" class="form-control" placeholder="Введите тип паспорта" required></textarea><br>
+    <textarea name="passportN" id="passportN" class="form-control" placeholder="Введите номер паспорта" required></textarea><br>
+    <textarea name="departmentN" id="departmentN" class="form-control" placeholder="Введите имя департамента" required></textarea><br>
+    <textarea name="departmentPh" id="departmentPh" class="form-control" placeholder="Введите телефон департамента" required></textarea><br>
+    <button class="btn btn-warning btn-secondary btn-sm">Добавить</button>
+
+  </form>
+
+</main>
+
+{{template "footer"}}
+{{end}}

@@ -1,0 +1,46 @@
+{{define "getCD"}}
+{{template "header"}}
+
+<main class="px-3">
+  <br>
+      <form action="/get_CD" method="post">
+            <textarea name="nameC" id="nameC" class="form-control" placeholder="Введите имя компании" required></textarea><br>
+            <textarea name="nameD" id="nameD" class="form-control" placeholder="Введите имя департамента" required></textarea><br>
+            <button class="btn btn-warning btn-secondary btn-sm">Найти</button>
+      </form>
+        <br>
+      <table class="table table-bordered table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Телефон</th>
+            <th>Компания</th>
+            <th>Тип Паспорта</th>
+            <th>Номер Паспорта</th>
+            <th>Департамент</th>
+            <th>Номер Депортамента</th>
+          </tr>
+
+          {{range .}}
+          <tr>
+              <td>{{.Id}}</td>
+              <td>{{.NameS}}</td>
+              <td>{{.SurnameS}}</td>
+              <td>{{.PhoneS}}</td>
+              <td>{{.CompanyName}}</td>
+              <td>{{.PassportT}}</td>
+              <td>{{.PassportN}}</td>
+              <td>{{.NameD}}</td>
+              <td>{{.PhoneD}}</td>
+          </tr>
+          {{end}}
+      </table>
+
+  <p class="lead">
+    <a href="/" class="btn btn-warning btn-secondary btn-sm">Назад</a>
+  </p>
+</main>
+
+{{template "footer"}}
+{{end}}
